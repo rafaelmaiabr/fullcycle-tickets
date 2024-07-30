@@ -71,3 +71,35 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Utilidades
+Criação de crud, migrations, etc
+
+### CRUD Completo `nest g resource`
+Após executar o comando, basta responder as perguntas
+1. Nome do Recurso. (events, tickets, etc)
+2. Tipo de crud: REST API, etc.
+
+Para criação de módulo, controllers, entre outros. Pode criar desta forma:
+`nest g module NomeModulo`
+`nest g controller NomeController`
+`nest g service NomeController`
+
+
+### Startar projeto
+DEV: npm run start:dev
+
+### Rotas via api.http
+metodo + endpoint
+GET http://localhost:8000
+
+### Docker Compose
+Configurar arquivo `docker-compose.yaml`
+Inicializar container `docker compose up` 
+Eliminar container `docker composer down`
+Acessar container bash: `docker compose exec db bash`
+
+### Prisma
+Inicializar prisma no projeto `npx prisma init`
+Criação das migrations `schema.prisma`
+Executar migration: `npx prisma migrate dev`
