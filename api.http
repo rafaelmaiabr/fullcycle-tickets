@@ -6,7 +6,7 @@ POST http://localhost:3000/events
 Content-Type: application/json
 
 {
-  "name": "Novo Evento 2",
+  "name": "Novo Evento 3",
   "description": "Descrição do evento",
   "date": "2020-01-01T00:00:00.000Z",
   "price": 10.5
@@ -31,3 +31,16 @@ Content-Type: application/json
 
 ### Delete event by id
 DELETE http://localhost:3000/events/{{eventId}}
+
+
+### Get spots of an event
+GET http://localhost:3000/events/{{eventId}}/spots
+
+### Save the id of the created spot
+# @name createSpot
+POST http://localhost:3000/events/{{eventId}}/spots
+Content-Type: application/json
+
+{
+  "name": "Spot 1"
+}
